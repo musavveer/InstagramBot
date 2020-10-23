@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import random
+import os
+from os import environ
+
 
 class InstagramBot:
 	def __init__(self,username,password):
@@ -35,7 +38,7 @@ class InstagramBot:
 
 			i += 1
 
-insta = InstagramBot('Your_Username', 'Your_Password')
+insta = InstagramBot(environ['Your_Username'], environ['Your_Password'])
 insta.login()
 insta.searchHashtag('Hashtags')
 insta.likePhotos(2)
