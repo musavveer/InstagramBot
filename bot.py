@@ -4,6 +4,7 @@ import time
 import random
 import os
 from os import environ
+from decouple import config
 
 
 class InstagramBot:
@@ -38,7 +39,7 @@ class InstagramBot:
 
 			i += 1
 
-insta = InstagramBot(environ['Your_Username'], environ['Your_Password'])
+insta = InstagramBot(config['Your_Username'], congig['Your_Password'])
 insta.login()
 insta.searchHashtag('Hashtags')
 insta.likePhotos(2)
