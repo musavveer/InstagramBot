@@ -39,7 +39,7 @@ class InstagramBot:
 
 			i += 1
 
-insta = InstagramBot(config['Your_Username'], congig['Your_Password'])
+insta = InstagramBot(config['Your_Username'], config['Your_Password'])
 insta.login()
 insta.searchHashtag('Hashtags')
 insta.likePhotos(2)
